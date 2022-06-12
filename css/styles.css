@@ -2,39 +2,48 @@ body {
   padding: 0;
   margin: 0;
   background-color: #F1ECC3; }
-
-header {
-  height: 200px;
-  padding: 0 50px;
-  /* ARREGLAR COLOR */
-  color: #0000003d;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-/* NAVEGACION */
-.navegacion {
-  background-color: #C9D8B6;
-  display: flex;
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0; }
-  .navegacion li {
-    /* items de navegacion */
-    margin: 4px 0px;
-    padding: 0px;
-    border-radius: 5%;
-    transition-duration: 0.2s; }
-    .navegacion li :hover {
-      transform: scale(1.14); }
-    .navegacion li a {
-      /* enlace de la navegacion */
-      text-decoration: none;
-      color: #515E63;
-      font-size: 30px;
-      font-family: 'Viga', sans-serif;
-      padding: 0 10px;
-      transition: 0, 4s; }
+  body header {
+    height: 200px;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    body header #check {
+      display: none; }
+    body header .logo {
+      /* logo de la pagina */
+      width: 11em;
+      height: 11em; }
+    body header .navegacion {
+      /* NAVEGACION */
+      background-color: #C9D8B6;
+      display: flex;
+      list-style-type: none;
+      margin: 0 auto;
+      padding: 0; }
+      body header .navegacion li {
+        /* items de navegacion */
+        margin: 4px 0px;
+        padding: 0px;
+        border-radius: 5%;
+        transition-duration: 0.2s; }
+        body header .navegacion li :hover {
+          transform: scale(1.14); }
+        body header .navegacion li a {
+          /* enlace de la navegacion */
+          text-decoration: none;
+          color: #515E63;
+          font-size: 30px;
+          font-family: 'Viga', sans-serif;
+          padding: 0 10px;
+          transition: 0, 4s; }
+  body #banner {
+    /* BANNER */
+    padding: 0 50px;
+    background-image: url(/multimedia/fondo.jpg);
+    height: 50vh;
+    background-size: cover;
+    background-position: center; }
 
 /* Responsive nav */
 .mostrar-menu,
@@ -51,17 +60,6 @@ header {
 .mostrar-menu:hover,
 .esconder-menu:hover {
   color: #062e7e; }
-
-#check {
-  display: none; }
-
-/* BANNER */
-#banner {
-  padding: 0 50px;
-  background-image: url(/multimedia/fondo.jpg);
-  height: 50vh;
-  background-size: cover;
-  background-position: center; }
 
 /* MEDIA RESPONSIVE */
 @media (max-width: 920px) {
@@ -90,11 +88,6 @@ header {
     right: 15px; }
   #check:checked ~ .menu {
     right: 0; } }
-
-/* logo de la pagina */
-.logo {
-  width: 11em;
-  height: 11em; }
 
 /* ZONA PARA ADOPTAR ANIMALES */
 .section-adoptar {
@@ -129,18 +122,15 @@ header {
     font-size: 18px;
     font-family: Alice;
     width: 500px; }
-
-/* imagenes de los perros antes y despues */
-.img-antes-despues {
-  width: 250px; }
-
-#antes,
-#despues {
-  height: 400px;
-  width: 250px; }
-
-.img-respo {
-  display: none; }
+  .section-antes-despues .img-antes-despues {
+    /* imagenes de los perros antes y despues */
+    width: 250px; }
+    .section-antes-despues .img-antes-despues #antes,
+    .section-antes-despues .img-antes-despues #despues {
+      height: 400px;
+      width: 250px; }
+    .section-antes-despues .img-antes-despues .img-respo {
+      display: none; }
 
 @media (max-width: 1024px) {
   #antes,
@@ -188,14 +178,12 @@ footer {
     margin: 0px;
     padding: 0;
     text-decoration: none; }
-
-.contenedor-logo {
-  justify-self: end; }
-
-#logo-footer {
-  margin-right: 12px;
-  height: 100%;
-  width: 100%; }
+    .contenedor-boton button a .contenedor-logo {
+      justify-self: end; }
+      .contenedor-boton button a .contenedor-logo #logo-footer {
+        margin-right: 12px;
+        height: 100%;
+        width: 100%; }
 
 @media (max-width: 600px) {
   footer {

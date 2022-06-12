@@ -7,58 +7,81 @@ $color-nav: #C9D8B6;
 body {
     padding: 0;
     margin: 0;
-    background-color: #F1ECC3;
-}
+    background-color: $color1;
 
-header {
-    height: 200px;
-    padding: 0 50px;
-    /* ARREGLAR COLOR */
-    color: #0000003d;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    header {
+        height: 200px;
+        padding: 0 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-
-}
-
-/* NAVEGACION */
-.navegacion {
-    background-color: #C9D8B6;
-    display: flex;
-    list-style-type: none;
-    margin: 0 auto;
-    padding: 0;
-
-
-
-    li {
-        /* items de navegacion */
-        margin: 4px 0px;
-        padding: 0px;
-        border-radius: 5%;
-        transition-duration: 0.2s;
-
-
-
-
-        :hover {
-
-            transform: scale(1.14);
+        #check {
+            display: none;
         }
 
 
-        a {
-            /* enlace de la navegacion */
-            text-decoration: none;
-            color: #515E63;
-            font-size: 30px;
-            font-family: 'Viga', sans-serif;
-            padding: 0 10px;
-            transition: 0, 4s;
+        .logo {
+            /* logo de la pagina */
+            width: 11em;
+            height: 11em;
         }
+
+
+        .navegacion {
+            /* NAVEGACION */
+            background-color: $color-nav;
+            display: flex;
+            list-style-type: none;
+            margin: 0 auto;
+            padding: 0;
+
+
+
+            li {
+                /* items de navegacion */
+                margin: 4px 0px;
+                padding: 0px;
+                border-radius: 5%;
+                transition-duration: 0.2s;
+
+
+
+
+                :hover {
+
+                    transform: scale(1.14);
+                }
+
+
+                a {
+                    /* enlace de la navegacion */
+                    text-decoration: none;
+                    color: #515E63;
+                    font-size: 30px;
+                    font-family: 'Viga', sans-serif;
+                    padding: 0 10px;
+                    transition: 0, 4s;
+                }
+            }
+        }
+
     }
+
+    #banner {
+        /* BANNER */
+        padding: 0 50px;
+        background-image: url(/multimedia/fondo.jpg);
+        height: 50vh;
+        background-size: cover;
+        background-position: center;
+    }
+
 }
+
+
+
+
 
 /* Responsive nav */
 .mostrar-menu,
@@ -81,18 +104,7 @@ header {
 
 }
 
-#check {
-    display: none;
-}
 
-/* BANNER */
-#banner {
-    padding: 0 50px;
-    background-image: url(/multimedia/fondo.jpg);
-    height: 50vh;
-    background-size: cover;
-    background-position: center;
-}
 
 
 
@@ -110,7 +122,7 @@ header {
         position: fixed;
         width: 100%;
         height: 100vh;
-        background-color: #F1ECC3;
+        background-color: $color1;
         right: -100%;
         top: 0;
         text-align: center;
@@ -140,17 +152,12 @@ header {
 }
 
 
-/* logo de la pagina */
-.logo {
 
-    width: 11em;
-    height: 11em;
-}
 
 /* ZONA PARA ADOPTAR ANIMALES */
 .section-adoptar {
 
-    background-color: #7fb4aa;
+    background-color: $color2;
     display: flex;
     flex-wrap: wrap;
     border-radius: 2px;
@@ -195,25 +202,30 @@ header {
 
     }
 
+
+
+    .img-antes-despues {
+        /* imagenes de los perros antes y despues */
+        width: 250px;
+
+        #antes,
+        #despues {
+            height: 400px;
+            width: 250px;
+
+        }
+
+        .img-respo {
+            display: none;
+        }
+
+    }
+
 }
 
-/* imagenes de los perros antes y despues */
 
-.img-antes-despues {
-    width: 250px;
 
-}
 
-#antes,
-#despues {
-    height: 400px;
-    width: 250px;
-
-}
-
-.img-respo {
-    display: none;
-}
 
 
 @media (max-width: 1024px) {
@@ -247,7 +259,7 @@ header {
 
 
 footer {
-    background-color: #C9D8B6;
+    background-color: $color-nav;
     display: flex;
     justify-content: space-between;
     width: 100%;
@@ -297,20 +309,23 @@ footer {
         padding: 0;
         text-decoration: none;
 
+        .contenedor-logo {
+            justify-self: end;
+
+            #logo-footer {
+                margin-right: 12px;
+                height: 100%;
+                width: 100%;
+            }
+        }
     }
 
 
 }
 
-.contenedor-logo {
-    justify-self: end;
-}
 
-#logo-footer {
-    margin-right: 12px;
-    height: 100%;
-    width: 100%;
-}
+
+
 
 
 
