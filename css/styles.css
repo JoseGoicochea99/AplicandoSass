@@ -2,53 +2,54 @@ body {
   padding: 0;
   margin: 0;
   background-color: #F1ECC3; }
-  body header {
-    height: 200px;
-    padding: 0 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-    body header #check {
-      display: none; }
-    body header .logo {
-      /* logo de la pagina */
-      width: 11em;
-      height: 11em; }
-    body header .navegacion {
-      /* NAVEGACION */
-      background-color: #C9D8B6;
-      display: flex;
-      list-style-type: none;
-      margin: 0 auto;
-      padding: 0; }
-      body header .navegacion li {
-        /* items de navegacion */
-        margin: 4px 0px;
-        padding: 0px;
-        border-radius: 5%;
-        transition-duration: 0.2s; }
-        body header .navegacion li :hover {
-          transform: scale(1.14); }
-        body header .navegacion li a {
-          /* enlace de la navegacion */
-          text-decoration: none;
-          color: #515E63;
-          font-size: 30px;
-          font-family: 'Viga', sans-serif;
-          padding: 0 10px;
-          transition: 0, 4s; }
-  body #banner {
-    /* BANNER */
-    padding: 0 50px;
-    background-image: url(/multimedia/fondo.jpg);
-    height: 50vh;
-    background-size: cover;
-    background-position: center; }
 
-/* Responsive nav */
-.mostrar-menu,
-.esconder-menu {
-  color: rgba(35, 36, 8, 0.133);
+header {
+  height: 200px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header #check {
+    display: none; }
+  header .logo {
+    /* logo de la pagina */
+    width: 11em;
+    height: 11em; }
+  header .navegacion {
+    /* NAVEGACION */
+    background-color: #C9D8B6;
+    display: flex;
+    list-style-type: none;
+    margin: 0 auto;
+    padding: 0; }
+    header .navegacion li {
+      /* items de navegacion */
+      margin: 4px 0px;
+      padding: 0px;
+      border-radius: 5%;
+      transition-duration: 0.2s; }
+      header .navegacion li:hover {
+        transform: scale(1.14); }
+      header .navegacion li a {
+        /* enlace de la navegacion */
+        text-decoration: none;
+        color: #536351;
+        font-size: 30px;
+        font-family: 'Viga', sans-serif;
+        padding: 0 10px;
+        transition: 0, 4s; }
+        header .navegacion li a:hover {
+          color: #273c46; }
+
+#banner {
+  /* BANNER */
+  padding: 0 50px;
+  background-image: url(/multimedia/fondo.jpg);
+  height: 50vh;
+  background-size: cover;
+  background-position: center; }
+
+.mostrar-menu, .esconder-menu {
   font-size: 30px;
   cursor: pointer;
   display: none;
@@ -57,11 +58,7 @@ body {
 .mostrar-menu {
   order: 1; }
 
-.mostrar-menu:hover,
-.esconder-menu:hover {
-  color: #062e7e; }
-
-/* MEDIA RESPONSIVE */
+/* MEDIA NAV */
 @media (max-width: 920px) {
   .mostrar-menu,
   .esconder-menu {
@@ -80,8 +77,7 @@ body {
   .navegacion {
     display: block;
     padding: 4px;
-    text-decoration: none;
-    color: #483491; }
+    text-decoration: none; }
   .esconder-menu {
     position: absolute;
     top: 40px;
@@ -109,7 +105,7 @@ body {
   .section-adoptar a {
     /* Cuadro de enlace de adopcion */
     font-family: Sigmar one;
-    color: #486963;
+    color: #5b6948;
     text-decoration: none; }
 
 /* Section de la historia de un perro antes y despues del refugio */
